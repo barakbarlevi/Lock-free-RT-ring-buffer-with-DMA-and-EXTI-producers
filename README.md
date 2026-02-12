@@ -1,12 +1,10 @@
-# Lock free ring buffer for real time packet processing using DMA and EXTI producers
-
 Bare metal embedded firmware demonstration on an STM32-NucleoF446RE of a lock free ring buffer. Implements multi-producer synchronization using atomic operations and DMA-based packet reception over SPI. Memory barriers prevent CPU instruction reordering.
 ![Image](https://github.com/user-attachments/assets/7867b839-08c8-4d98-adb8-70527b393e2f)
 
 #### Packet Flow
-1. **Source 1 (Button):** Press blue button → EXTI interrupt → writes packet with `src_id=1`
-2. **Source 2 (DMA/SPI):** BBB sends packet over SPI → DMA copies to staging buffer → interrupt → writes packet with `src_id=2`
-3. **Consumer:** Main loop polls ring buffer every 2 seconds, processes packets
+1. Source 1 (Button): Press blue button → EXTI interrupt → writes packet with `src_id=1`
+2. Source 2 (DMA/SPI): BBB sends packet over SPI → DMA copies to staging buffer → interrupt → writes packet with `src_id=2`
+3. Consumer: Main loop polls ring buffer every 2 seconds, processes packets
 
 #### Synchronization
 
