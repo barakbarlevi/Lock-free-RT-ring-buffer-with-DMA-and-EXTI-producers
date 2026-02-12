@@ -1,5 +1,5 @@
 Bare metal embedded firmware demonstration on an STM32-NucleoF446RE of a lock free ring buffer. Implements multi-producer synchronization using atomic operations and DMA-based packet reception over SPI. Memory barriers prevent CPU instruction reordering.
-![Image](https://github.com/user-attachments/assets/8fa6c996-3976-44d4-937a-edff83efa047)
+![Image](https://github.com/user-attachments/assets/b4b8746b-2f3a-4824-9c28-2c9c8a77d613)
 
 #### Packet Flow
 1. Source 1 (Button): Press blue button → EXTI interrupt → writes packet with `src_id=1`
