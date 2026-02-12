@@ -1,0 +1,20 @@
+# Build artifacts
+build/
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+*.d
+*.lst
+
+# CMSIS (user should download separately)
+CMSIS/
+
+# Editor
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db

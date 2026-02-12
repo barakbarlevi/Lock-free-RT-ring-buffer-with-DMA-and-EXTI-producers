@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "serverpath": "/usr/bin/openocd",  // Force this one
+            "device": "STM32F446RE",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build",
+            "configFiles": [
+                "/usr/share/openocd/scripts/interface/stlink.cfg",
+                "/usr/share/openocd/scripts/target/stm32f4x.cfg"
+            ]
+        }
+    ]
+}
